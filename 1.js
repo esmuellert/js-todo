@@ -1,5 +1,15 @@
-function getWords(){
-var a = document.getElementById("events").value;
-document.getElementById("demo").innerHTML=a;
-console.log(a);
-}
+
+$(document).ready(function(){
+
+  $("#submit").click(function(){
+
+  $("ul").prepend('<li></li>')
+    $("ul li:first").text($("#events").val());
+ });
+});
+
+$(document).ready(function() {
+  $("ul").children().click(function() {
+    $("this").attr
+  });
+});

@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
     <script type="text/javascript" src="1.js">
     </script>
     <title>ToDo</title>
@@ -13,11 +15,20 @@
   <body>
     <h1>ToDo</h1>
 
+    <div>
+      <p>please input your schedule:
+      <input type="text" id="events">
+      <button id="submit">Submit</button></p>
+    </div>
 
-      <input type="text" name="events" id="events">
-      <button onclick="getWords()">Submit</button>
+    <div>
+      <a>All</a>
+      <a class="mov1">finshed</a>
+      <a class="mov2">unfinished</a>
+    </div>
 
-    <p id="demo"></p>
+    <p id="subtitle1">Your schedule:</p>
+    <ul></ul>
 
   </body>
 </html>
