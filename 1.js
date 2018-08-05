@@ -11,28 +11,34 @@ $(document).ready(function(){
   $(document).on('click','li',function() {
     $(this).removeClass("a");
     $(this).toggleClass("b");
+    if(!$(this).hasClass('b')){
+      $(this).addClass('a');
+    }
     });
 
-
-  function all(){
-    $(".mov0").click(function(){
-      $(".b1").removeClass("b1",function(){
-        $(this).addClass("b");
-      });
-      $(".a1").removeClass("a1",function(){
-        $(this).addClass("a");
-      });
+  $(".mov0").click(function(){
+    $(".a1").addClass('a');
+    $(".a1").removeClass('a1');
+    $(".b1").addClass('b');
+    $(".b1").removeClass('b1');
     });
-  }
 
   $(".mov1").click(function () {
-    all();
-    $(".a").removeClass("a",$(this).addClass("a1"))
+    $(".a1").addClass('a');
+    $(".a1").removeClass('a1');
+    $(".b1").addClass('b');
+    $(".b1").removeClass('b1');
+    $(".a").addClass('a1');
+    $(".a").removeClass('a');
   });
 
   $(".mov2").click(function() {
-    all();
-    $(".b").removeClass("b",$(this).addClass("b1"));
+    $(".a1").addClass('a');
+    $(".a1").removeClass('a1');
+    $(".b1").addClass('b');
+    $(".b1").removeClass('b1');
+    $(".b").addClass('b1');
+    $(".b").removeClass('b');
 
 
   });
