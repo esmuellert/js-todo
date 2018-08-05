@@ -8,6 +8,11 @@
   left: 220px;
 }
 
+.mov3{
+  position: absolute;
+  left: 360px;
+}
+
 .b{
   text-decoration: line-through;
 }

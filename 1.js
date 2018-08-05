@@ -39,9 +39,12 @@ $(document).ready(function(){
     $(".b1").removeClass('b1');
     $(".b").addClass('b1');
     $(".b").removeClass('b');
-
-
   });
 
+  $(".mov3").click(function() {
+    /* Act on the event */
+    $(".a").remove();
+    $(".b").remove();
+  });
 
 });

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <style>
+  .mov1{
+    position:absolute;
+    left: 100px;
+  }
+
+  .mov2{
+    position:absolute;
+    left: 220px;
+  }
+
+  .mov3{
+    position: absolute;
+    left: 360px;
+  }
+
+  .b{
+    text-decoration: line-through;
+  }
+
+  .a{
+
+   }
+
+  .a1{
+    display: none;
+  }
+
+  .b1{
+    text-decoration: line-through;
+    display: none;
+  }
+
+  </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+    <script>
+
+    $(document).ready(function(){
+
+      $("#submit").click(function(){
+
+      $("ul").prepend('<li></li>')
+        $("ul li:first").text($("#events").val());
+        $("ul li:first").addClass("a");
+      });
+
+      $(document).on('click','li',function() {
+        $(this).removeClass("a");
+        $(this).toggleClass("b");
+        if(!$(this).hasClass('b')){
+          $(this).addClass('a');
+        }
+        });
+
+      $(".mov0").click(function(){
+        $(".a1").addClass('a');
+        $(".a1").removeClass('a1');
+        $(".b1").addClass('b');
+        $(".b1").removeClass('b1');
+        });
+
+      $(".mov1").click(function () {
+        $(".a1").addClass('a');
+        $(".a1").removeClass('a1');
+        $(".b1").addClass('b');
+        $(".b1").removeClass('b1');
+        $(".a").addClass('a1');
+        $(".a").removeClass('a');
+      });
+
+      $(".mov2").click(function() {
+        $(".a1").addClass('a');
+        $(".a1").removeClass('a1');
+        $(".b1").addClass('b');
+        $(".b1").removeClass('b1');
+        $(".b").addClass('b1');
+        $(".b").removeClass('b');
+      });
+
+      $(".mov3").click(function() {
+        /* Act on the event */
+        $(".a").remove();
+        $(".b").remove();
+      });
+
+    });
+
+    </script>
+    <title>ToDo</title>
+
+  </head>
+  <body>
+    <h1>ToDo</h1>
+
+    <div>
+      <p>please input your schedule:
+      <input type="text" id="events">
+      <button id="submit">Submit</button></p>
+    </div>
+
+    <div>
+      <a class="mov0">All</a>
+      <a class="mov1">finshed</a>
+      <a class="mov2">unfinished</a>
+      <a class="mov3">Clear</a>
+    </div>
+
+    <p id="subtitle1">Your schedule:</p>
+    <ul></ul>
+  </body>
+</html>
