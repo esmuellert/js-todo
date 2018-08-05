@@ -13,5 +13,14 @@
 }
 
 .a{
-  
+color: blue;
  }
+
+.a1{
+  display: none;
+}
+
+.b1{
+  text-decoration: line-through;
+  display: none;
+}
